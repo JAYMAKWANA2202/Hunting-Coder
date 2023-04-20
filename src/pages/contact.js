@@ -8,6 +8,7 @@ function contact() {
       <Head>
         <title>Contact Page</title>
       </Head>
+
       <div className="navbar">
         <h1>
           hello <span>contact</span> page

@@ -1,5 +1,3 @@
-import Navbar from "../Navbar";
-
 export default function post() {
   return (
     <>
@@ -11,7 +9,6 @@ export default function post() {
           text-align: center;
         }
       `}</style>
-      <Navbar />
       <h1>this is post inside post</h1>
     </>
   );

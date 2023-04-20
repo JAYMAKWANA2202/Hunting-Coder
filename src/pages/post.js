@@ -1,5 +1,5 @@
 import styles from "../styles/post.module.css";
-// import styles from "../../styles/post.module.css";
+
 import Link from "next/link";
 
 export const getStaticProps = async () => {
@@ -16,17 +16,19 @@ export const getStaticProps = async () => {
 export default function index({ data }) {
   return (
     <>
-      {data.slice(0, 5).map((post) => {
+      {data.slice(0, 20).map((post) => {
         return (
           <div key={post.id} className={styles.post}>
-            <Link href={`/post/${post.id}`}>
-              <p className={styles.p}>{post.id}</p>
+            <p className={styles.p}>{post.id}</p>
+            <Link href={`/posts/${post.id}`}>
+              <h2 className={styles.h2}>{post.title}</h2>
             </Link>
-            <h2 className={styles.h2}>{post.title}</h2>
-            <span className={styles.span}> {post.body}</span>
           </div>
         );
       })}
+      <Link href={`/posts/post1`}>
+        <button>go to next</button>
+      </Link>
     </>
   );
 }

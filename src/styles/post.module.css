@@ -4,8 +4,10 @@
   cursor: pointer;
 }
 .post {
-  border-bottom: 1px solid gray;
+  border: 1px solid gray;
+  border-radius: 15px;
   margin: 25px 250px;
+  padding: 10px;
 }
 .post:hover {
   box-shadow: rgba(231, 222, 222, 0.25) 0px 14px 28px,
@@ -29,6 +31,11 @@
   color: yellow;
 }
 .post span {
-  color: rgb(19, 22, 223);
-  /* margin-top: 21px; */
+  color: rgb(244, 99, 244);
+  padding: 15px 0;
+}
+
+.button {
+  border-radius: 15px;
+  margin: 25px 250px;
 }
