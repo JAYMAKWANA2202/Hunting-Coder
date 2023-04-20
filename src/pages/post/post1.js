@@ -1,12 +1,8 @@
-import Head from "next/head";
-import Navbar from "./Navbar";
+import Navbar from "../Navbar";
 
-export default function index() {
+export default function post() {
   return (
     <>
-      <Head>
-        <title>Home Page</title>
-      </Head>
       <style jsx>{`
         h1 {
           color: orange;
@@ -15,9 +11,8 @@ export default function index() {
           text-align: center;
         }
       `}</style>
-      <Head>Home Page</Head>
       <Navbar />
-      <h1>Welcome to home page</h1>
+      <h1>this is post inside post</h1>
     </>
   );
 }

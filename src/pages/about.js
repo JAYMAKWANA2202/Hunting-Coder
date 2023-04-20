@@ -1,11 +1,11 @@
 import Head from "next/head";
 import Navbar from "./Navbar";
 
-export default function index() {
+export default function about() {
   return (
     <>
       <Head>
-        <title>Home Page</title>
+        <title>About Page</title>
       </Head>
       <style jsx>{`
         h1 {
@@ -13,11 +13,13 @@ export default function index() {
           margin-top: 12px;
           align-items: center;
           text-align: center;
+          font-weight: 25px;
         }
       `}</style>
-      <Head>Home Page</Head>
       <Navbar />
-      <h1>Welcome to home page</h1>
+      <div>
+        <h1>About page</h1>
+      </div>
     </>
   );
 }
