@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
 
 export default function index() {
   return (
@@ -16,7 +15,7 @@ export default function index() {
         }
       `}</style>
       <Head>Home Page</Head>
-      <Navbar />
+
       <h1>Welcome to home page</h1>
     </>
   );

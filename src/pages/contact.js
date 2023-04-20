@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Head from "next/head";
-import Navbar from "./Navbar";
 
 function contact() {
   return (
@@ -9,7 +8,6 @@ function contact() {
       <Head>
         <title>Contact Page</title>
       </Head>
-      <Navbar />
       <div className="navbar">
         <h1>
           hello <span>contact</span> page

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Navbar from "./Navbar";
 
 export default function about() {
   return (
@@ -16,7 +15,6 @@ export default function about() {
           font-weight: 25px;
         }
       `}</style>
-      <Navbar />
       <div>
         <h1>About page</h1>
       </div>
