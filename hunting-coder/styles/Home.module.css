@@ -3,7 +3,6 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: -32px;
 }
 
 .description {
@@ -40,8 +39,20 @@
   position: relative;
   padding: 2rem 0;
 }
-.center h1 {
+.center h1 span {
+  color: red;
   font-size: 50px;
+}
+.center img {
+  margin-top: 15px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: 45px;
+}
+.center img:hover {
+  cursor: pointer;
+  opacity: 0.5;
 }
 
 .center p {
@@ -53,6 +64,10 @@
 
 .deatil {
   margin-top: 30px;
+}
+
+.deatil h3 {
+  font-family: Arial, Helvetica, sans-serif;
 }
 .mainnav {
   margin: 50px 0;
@@ -76,7 +91,8 @@
 
 .content h2 {
   padding: 10px 0;
-  color: yellow;
+  color: blueviolet;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Enable hover only on non-touch devices */

@@ -1,5 +1,14 @@
+import Head from "next/head";
 import React from "react";
 
 export default function Contact() {
-  return <div> this is contact page</div>;
+  return (
+    <>
+      <Head>
+        <title>contact Page</title>
+        <link rel="icon" href="/coder.png" />
+      </Head>
+      <div>this is</div>
+    </>
+  );
 }

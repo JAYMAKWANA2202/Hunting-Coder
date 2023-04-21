@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+console.log("styles: ", styles);
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,28 +22,31 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.center}>
-          <h1>Hunting Coder</h1>
+          <h1>
+            <span>Hunting Coder</span>
+          </h1>
+          <img src="/home_pic.avif" alt="" />
           <p>Welcome Coders for Hunting the code</p>
         </div>
 
         <div className={styles.content}>
           <h2>Latest Blog:</h2>
           <div className={styles.deatil}>
-            <h3>Learn React JS </h3>
+            <h3>How to learn React JS in 2023?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
               ipsa!
             </p>
           </div>
           <div className={styles.deatil}>
-            <h3>Learn React JS </h3>
+            <h3>How to learn React JS in 2023?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
               ipsa!
             </p>
           </div>
           <div className={styles.deatil}>
-            <h3>Learn React JS </h3>
+            <h3>How to learn React JS in 2023?</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
               ipsa!
