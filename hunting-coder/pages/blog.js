@@ -1,8 +1,20 @@
 import Head from "next/head";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Blog() {
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:3000/api/blogs")
+      .then((a) => {
+        return a.json();
+      })
+      .then((parsed) => {
+        console.log(parsed);
+        setBlogs(parsed);
+      });
+  }, []);
   return (
     <>
       <Head>
@@ -11,29 +23,20 @@ export default function Blog() {
       </Head>
       <main className={styles.main}>
         <div className={styles.content}>
-          <div className={styles.detail}>
-            <Link href={`/blogpost/Learn-React Js`}>
-              <h3>How to learn React JS in 2023?</h3>
-            </Link>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              ipsa!
-            </p>
-          </div>
-          <div className={styles.detail}>
-            <h3>How to learn React JS in 2023?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              ipsa!
-            </p>
-          </div>
-          <div className={styles.detail}>
-            <h3>How to learn React JS in 2023?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              ipsa!
-            </p>
-          </div>
+          {blogs.map((blogitem) => {
+            return (
+              <>
+                <div className={styles.detail}>
+                  <Link href={`/blogpost/Learn-React Js`}>
+                    <h3>{blogitem.title}</h3>
+                  </Link>
+                  <p>{blogitem.content.substr(0, 100)}</p>
+                </div>
+                <br />
+                <hr />
+              </>
+            );
+          })}
         </div>
       </main>
     </>
