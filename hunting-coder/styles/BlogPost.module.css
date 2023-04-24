@@ -1,0 +1,21 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 2rem 18rem;
+}
+
+.center p {
+  padding: 10px;
+  margin-left: -20px;
+  margin-top: 10px;
+  font-size: 25px;
+}

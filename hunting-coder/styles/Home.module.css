@@ -33,15 +33,13 @@
 }
 
 .center {
-  /* display: flex; */
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 2rem 0;
 }
 .center h1 span {
   color: red;
-  font-size: 50px;
+  font-size: 45px;
 }
 .center img {
   margin-top: 15px;
