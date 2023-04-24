@@ -8,7 +8,7 @@ export default function Contact() {
         <title>contact Page</title>
         <link rel="icon" href="/coder.png" />
       </Head>
-      <div>this is</div>
+      <div>this is contact page </div>
     </>
   );
 }

@@ -1,22 +1,31 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRouter } from "next/router";
 import styles from "../../styles/BlogPost.module.css";
+import { useEffect, useState } from "react";
 
 export default function slug() {
+  const [blog, setBlog] = useState();
   const router = useRouter();
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { slug } = router.query;
+    fetch(`http://localhost:3000/api/getblogs?slug=${slug}`)
+      .then((a) => {
+        return a.json();
+      })
+      .then((parsed) => {
+        console.log(parsed);
+        setBlog(parsed);
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [router.isReady]);
 
-  const { slug } = router.query;
   return (
     <>
       <div className={styles.main}>
-        <h1> {slug}</h1>
+        <h1>{blog && blog.title}</h1>
         <hr />
-        <div className={styles.center}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-          inventore modi eos, molestiae consequuntur esse voluptates? Quae,
-          fuga. Iste maxime sint accusamus amet sunt commodi quidem
-          reprehenderit debitis aspernatur ullam.
-        </div>
+        <div className={styles.center}>{blog && blog.content}</div>
       </div>
     </>
   );
