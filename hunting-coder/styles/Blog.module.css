@@ -12,6 +12,7 @@
 .detail h3 {
   font-family: Arial, Helvetica, sans-serif;
   cursor: pointer;
+  font-size: 25px;
 }
 .detail h3:hover {
   color: crimson;
@@ -19,4 +20,5 @@
 
 .detail p {
   margin-top: 10px;
+  max-width: 45vw;
 }

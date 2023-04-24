@@ -26,11 +26,13 @@ export default function Blog() {
           {blogs.map((blogitem) => {
             return (
               <>
-                <div className={styles.detail}>
-                  <Link href={`/blogpost/Learn-React Js`}>
+                <div className={styles.detail} key={blogitem.slug}>
+                  <Link href={`/blogpost/${blogitem.slug}`}>
                     <h3>{blogitem.title}</h3>
                   </Link>
-                  <p>{blogitem.content.substr(0, 100)}</p>
+                  <p className={styles.p}>
+                    {blogitem.content.substr(0, 100)}...
+                  </p>
                 </div>
                 <br />
                 <hr />
