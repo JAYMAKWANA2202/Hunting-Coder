@@ -84,7 +84,7 @@
 .mainnav ul li:hover {
   color: blueviolet;
   cursor: pointer;
-  font-size: 23px;
+  /* font-size: 23px; */
 }
 
 .content h2 {
