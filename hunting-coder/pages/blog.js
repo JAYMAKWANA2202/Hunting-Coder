@@ -2,6 +2,7 @@ import Head from "next/head";
 import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import * as fs from "fs";
 
 export default function Blog(props) {
   const [blogs, setBlogs] = useState(props.allBlogs);
@@ -49,8 +50,14 @@ export default function Blog(props) {
 }
 
 export async function getStaticProps(context) {
-  let data = await fetch("http://localhost:3000/api/blogs");
-  let allBlogs = await data.json();
+  let data = await fs.promises.readdir("blogdata");
+  let myfile;
+  let allBlogs = [];
+  for (let index = 0; index < data.length; index++) {
+    const item = data[index];
+    myfile = await fs.promises.readFile("blogdata/" + item, "utf-8");
+    allBlogs.push(JSON.parse(myfile));
+  }
 
   return {
     props: { allBlogs }, // will be passed to the page component as props

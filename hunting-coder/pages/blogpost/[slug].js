@@ -2,23 +2,10 @@
 import { useRouter } from "next/router";
 import styles from "../../styles/BlogPost.module.css";
 import { useEffect, useState } from "react";
+import * as fs from "fs";
 
-export default function slug() {
-  const [blog, setBlog] = useState();
-  const router = useRouter();
-  useEffect(() => {
-    if (!router.isReady) return;
-    const { slug } = router.query;
-    fetch(`http://localhost:3000/api/getblogs?slug=${slug}`)
-      .then((a) => {
-        return a.json();
-      })
-      .then((parsed) => {
-        console.log(parsed);
-        setBlog(parsed);
-      });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [router.isReady]);
+export default function Slug(props) {
+  const [blog, setBlog] = useState(props.myBlog);
 
   return (
     <>
@@ -29,4 +16,25 @@ export default function slug() {
       </div>
     </>
   );
+}
+
+export async function getStaticPaths() {
+  return {
+    paths: [
+      { params: { slug: "how-to-learn-javaScript" } },
+      { params: { slug: "how-to-learn-nextjs" } },
+      { params: { slug: "how-to-learn-Reactjs" } },
+    ],
+    fallback: true, // can also be true or 'blocking'
+  };
+}
+
+export async function getStaticProps(context) {
+  console.log("context: ", context);
+  const { slug } = context.params;
+  let myBlog = await fs.promises.readFile(`blogdata/${slug}.json`, "utf-8");
+
+  return {
+    props: { myBlog: JSON.parse(myBlog) }, // will be passed to the page component as props
+  };
 }
