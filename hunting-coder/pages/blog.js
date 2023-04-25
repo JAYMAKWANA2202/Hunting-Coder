@@ -3,18 +3,21 @@ import styles from "../styles/Blog.module.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-export default function Blog() {
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:3000/api/blogs")
-      .then((a) => {
-        return a.json();
-      })
-      .then((parsed) => {
-        console.log(parsed);
-        setBlogs(parsed);
-      });
-  }, []);
+export default function Blog(props) {
+  const [blogs, setBlogs] = useState(props.allBlogs);
+
+  // this method is using java script ?
+  // useEffect(() => {
+  //   fetch("http://localhost:3000/api/blogs")
+  //     .then((a) => {
+  //       return a.json();
+  //     })
+  //     .then((parsed) => {
+  //       console.log(parsed);
+  //       setBlogs(parsed);
+  //     });
+  // }, []);
+
   return (
     <>
       <Head>
@@ -43,4 +46,13 @@ export default function Blog() {
       </main>
     </>
   );
+}
+
+export async function getStaticProps(context) {
+  let data = await fetch("http://localhost:3000/api/blogs");
+  let allBlogs = await data.json();
+
+  return {
+    props: { allBlogs }, // will be passed to the page component as props
+  };
 }
