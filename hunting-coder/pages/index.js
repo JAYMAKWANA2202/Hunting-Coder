@@ -21,11 +21,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.center}>
-          <h1>
-            <span>Hunting Coder</span>
-          </h1>
           <img src="/home_pic.avif" alt="Hunting coder" />
-          <p>Welcome Coders for Hunting the code</p>
+          <p></p>
         </div>
 
         <div className={styles.content}>
