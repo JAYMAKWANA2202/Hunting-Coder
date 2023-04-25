@@ -1,0 +1,23 @@
+.container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 45vw;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.headingh1 {
+  color: aqua;
+  text-align: center;
+}
+.headingh2 {
+  margin-top: 20px;
+  color: palevioletred;
+
+  text-align: start;
+}
+.para {
+  margin-top: 10px;
+  text-align: start;
+}

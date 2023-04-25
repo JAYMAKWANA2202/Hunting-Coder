@@ -55,11 +55,11 @@ export default function Contact() {
         <link rel="icon" href="/coder.png" />
       </Head>
       <div className={styles.container}>
-        <h1>Contact Us</h1>
+        <h1 className={styles.heading}>Contact Us</h1>
         <form onSubmit={handleSubmit}>
           <div className={styles.mb3}>
             <label htmlFor="name" className={styles.formlabel}>
-              Enter your name
+              Enter your name:
             </label>
             <input
               type="text"
@@ -73,7 +73,7 @@ export default function Contact() {
           </div>
           <div className={styles.mb3}>
             <label htmlFor="email" className={styles.formlabel}>
-              Email address
+              Email address:
             </label>
             <input
               type="email"
@@ -87,7 +87,7 @@ export default function Contact() {
           </div>
           <div className={styles.mb3}>
             <label htmlFor="phone" className={styles.formlabel}>
-              Phone
+              Phone:
             </label>
             <input
               type="phone"
@@ -98,10 +98,12 @@ export default function Contact() {
               id="phone"
             />
           </div>
-          <label htmlFor="floatingTextarea">Comments</label>
+          <label htmlFor="floatingTextarea" className={styles.formlabel}>
+            Comments:
+          </label>
           <div ame="form-floating">
             <textarea
-              className={styles.mb3}
+              className={styles.text}
               placeholder="Leave a comment here"
               onChange={handlechange}
               value={desc}
@@ -109,7 +111,8 @@ export default function Contact() {
               id="floatingTextarea"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
+
+          <button type="submit" className={styles.btn}>
             Submit
           </button>
         </form>
