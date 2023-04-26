@@ -21,6 +21,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.center}>
+          <h1>
+            <span>Hunting Coder</span>
+          </h1>
           <img src="/home_pic.avif" alt="Hunting coder" />
           <p></p>
         </div>

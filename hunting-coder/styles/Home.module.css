@@ -43,11 +43,11 @@
 }
 .center img {
   margin-top: 15px;
-  width: 250px;
-  height: 150px;
-  border-radius: 50%;
-  margin-left: 35px;
+  width: 200px;
+  height: 200px;
+  margin-left: 55px;
   border-radius: 15px;
+  border-radius: 50%;
 }
 .center img:hover {
   cursor: pointer;
