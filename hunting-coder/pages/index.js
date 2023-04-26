@@ -2,6 +2,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -44,13 +45,9 @@ export default function Home() {
               ipsa!
             </p>
           </div>
-          <div className={styles.deatil}>
-            <h3>How to learn React JS in 2023?</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi,
-              ipsa!
-            </p>
-          </div>
+          <Link href={"/blog"}>
+            <button className={styles.btn}> Read More Blogs</button>
+          </Link>
         </div>
       </main>
     </>

@@ -31,15 +31,15 @@ export default function Blog(props) {
             return (
               <>
                 <div className={styles.detail} key={blogitem.slug}>
-                  <Link href={`/blogpost/${blogitem.slug}`}>
-                    <h3>{blogitem.title}</h3>
-                  </Link>
+                  <h3>{blogitem.title}</h3>
+
                   <p className={styles.p}>
                     {blogitem.content.substr(0, 100)}...
                   </p>
                 </div>
-                <br />
-                <hr />
+                <Link href={`/blogpost/${blogitem.slug}`}>
+                  <button className={styles.btn}> Read More</button>
+                </Link>
               </>
             );
           })}

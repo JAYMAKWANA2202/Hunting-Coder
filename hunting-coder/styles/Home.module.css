@@ -38,7 +38,7 @@
   position: relative;
 }
 .center h1 span {
-  color: red;
+  color: crimson;
   font-size: 45px;
 }
 .center img {
@@ -62,7 +62,7 @@
 }
 
 .deatil {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .deatil h3 {
@@ -89,8 +89,8 @@
 }
 
 .content h2 {
-  padding: 10px 0;
-  color: blueviolet;
+  padding: 5px 0;
+  color: crimson;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -187,6 +187,21 @@
     );
     z-index: 1;
   }
+}
+
+.btn {
+  background-color: black;
+  color: aliceblue;
+  border: 1px solid whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 10px;
+}
+
+.btn:hover {
+  color: crimson;
 }
 
 /* Tablet and Smaller Desktop */

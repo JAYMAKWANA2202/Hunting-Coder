@@ -21,3 +21,8 @@
   margin-top: 10px;
   text-align: start;
 }
+
+.ul li {
+  text-align: start;
+  margin-top: 5px;
+}

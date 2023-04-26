@@ -23,6 +23,19 @@ export default function About() {
           corporis earum consequatur recusandae harum! Corporis ea molestias
           saepe nesciunt, earum ipsa aperiam maiores alias repellat?
         </p>
+        <p className={styles.ul}>
+          <ul>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+            <li>Services</li>
+          </ul>
+        </p>
         <h2 className={styles.headingh2}>Contact Us </h2>
         <p className={styles.para}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
