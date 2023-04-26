@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="nextjs , huntingcoder blog , hunting coder "
+          content="nextjs , huntingcoder blog , hunting coder, blogs"
         />
         <link rel="icon" href="/coder.png" />
       </Head>
