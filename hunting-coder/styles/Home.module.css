@@ -71,6 +71,7 @@
 .mainnav {
   margin: 50px 0;
   font-size: 20px;
+  position: static;
 }
 
 .mainnav ul {
